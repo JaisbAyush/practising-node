@@ -7,12 +7,6 @@ pipeline{
             }
         }
 
-        stage("install npm"){
-            steps{
-                sh 'sudo apt install npm'
-            }
-        }
-
         stage("build image"){
             steps{
                 sh 'docker build -t first-node-project .'
